@@ -1,9 +1,9 @@
 const initialItems = [
-  { id: 1, description: "pepperoni mushrooms", color: "blue" },
-  { id: 2, description: "onions", color: "green" },
-  { id: 3, description: "barbecue chicken", color: "orange" },
-  { id: 4, description: "pineapple", color: "pink" },
-  { id: 5, description: "vegan alternatives", color: "yellow" },
+  { id: 1, description: "pepperoni mushrooms", color: "blue", img: "👍" },
+  { id: 2, description: "onions", color: "green", img: "🍙" },
+  { id: 3, description: "barbecue chicken", color: "orange", img: "🐔" },
+  { id: 4, description: "pineapple", color: "pink", img: "🍍" },
+  { id: 5, description: "vegan alternatives", color: "yellow", img: "🥒" },
 ];
 
 export default function App() {
@@ -49,7 +49,7 @@ function PackingList() {
 function Item({ itemObj }) {
   return (
     <li className="skill" style={{ backgroundColor: `${itemObj.color}` }}>
-      {itemObj.description}
+      {itemObj.description} {itemObj.img}
     </li>
   );
 }
